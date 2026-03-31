@@ -28,3 +28,5 @@ WITH (copy_data = false, create_slot = false, slot_name = 'logical_slot');
 
 SELECT * FROM war
 WHERE war_name = 'MASTER LOGICAL INSERT WAR';
+
+SELECT * FROM test_dml;
