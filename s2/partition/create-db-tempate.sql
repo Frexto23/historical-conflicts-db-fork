@@ -79,7 +79,48 @@ CREATE INDEX idx_battle_hash_war_id ON battle_hash(war_id);
 
 
 
+
+CREATE TABLE battle_range (
+    battle_id BIGINT,
+    battle_date DATE NOT NULL,
+    result TEXT,
+    war_id BIGINT,
+    PRIMARY KEY (battle_id, battle_date)
+);
+
 CREATE TABLE battle_range_ww2 (
+    battle_id BIGINT,
+    battle_date DATE NOT NULL,
+    result TEXT,
+    war_id BIGINT,
+    PRIMARY KEY (battle_id, battle_date)
+);
+
+CREATE TABLE battle_range_ww1 (
+    battle_id BIGINT,
+    battle_date DATE NOT NULL,
+    result TEXT,
+    war_id BIGINT,
+    PRIMARY KEY (battle_id, battle_date)
+);
+
+CREATE TABLE battle_range_interwar (
+    battle_id BIGINT,
+    battle_date DATE NOT NULL,
+    result TEXT,
+    war_id BIGINT,
+    PRIMARY KEY (battle_id, battle_date)
+);
+
+CREATE TABLE battle_range_coldwar (
+    battle_id BIGINT,
+    battle_date DATE NOT NULL,
+    result TEXT,
+    war_id BIGINT,
+    PRIMARY KEY (battle_id, battle_date)
+);
+
+CREATE TABLE battle_range_modern (
     battle_id BIGINT,
     battle_date DATE NOT NULL,
     result TEXT,

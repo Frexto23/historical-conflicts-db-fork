@@ -5,6 +5,7 @@ BEGIN;
 -- Очистка
 -- =========================================
 TRUNCATE battle_range RESTART IDENTITY CASCADE;
+TRUNCATE battle_range_ww2 RESTART IDENTITY CASCADE;
 
 -- =========================================
 -- 1. RANGE (равномерно по периодам)

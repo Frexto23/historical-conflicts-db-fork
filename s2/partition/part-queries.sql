@@ -16,10 +16,13 @@ SELECT * FROM battle_range
 WHERE battle_date > '1943-07-12';
 
 
+DROP PUBLICATION pub_battle;
 
 CREATE PUBLICATION pub_battle
 FOR TABLE battle_range
-WITH (publish_via_partition_root = off);
+WITH (publish_via_partition_root = on);
+
+DROP SUBSCRIPTION sub_battle;
 
 CREATE SUBSCRIPTION sub_battle
 CONNECTION 'host=pg_course port=5432 dbname=part user=admin password=admin_pass'
@@ -27,5 +30,7 @@ PUBLICATION pub_battle;
 
 INSERT INTO battle_range VALUES
 (3, '1944-01-01', 'win', 1);
+
+SELECT * FROM battle_range_ww2;
 
 SELECT * FROM battle_range;
